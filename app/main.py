@@ -5,12 +5,9 @@ from fastapi.templating import Jinja2Templates
 from app.database import engine, Base
 from app.routers import notes, tags, auth
 import uvicorn
-import os
-from pathlib import Path
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
-
 
 # Create FastAPI app
 app = FastAPI(
@@ -19,11 +16,11 @@ app = FastAPI(
     version="2.0.0"
 )
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-# Mount static files
-app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static")
+# Mount static files (CSS, JS)
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 # Setup templates
-templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
+templates = Jinja2Templates(directory="templates")
 
 # Include API routers
 app.include_router(auth.router)
