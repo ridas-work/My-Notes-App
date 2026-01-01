@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI';
+    background: linear-gradient(45deg, #004765 38%, #001225 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0c325a;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #00264e;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #00264e;
+}
+
+.btn-secondary {
+    background: #82afd6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #0d3a5d;
+}
+
+.btn-danger {
+    background: #dc0218;
+    border-radius: 8px;
+    
+    color: white;
+    font-size: 12px;
+    font-size: bold;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+.btn-edit {
+    background: #28a745;
+    color: white;
+    font-size: 12px;
+    font-size: bold;
+    border-radius: 8px;
+}
+
+.btn-edit:hover {
+    background: #218838;
+}
+
+.filter-section {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-section select {
+    padding: 8px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.note-item {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.note-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.note-title {
+    font-size: 1.3em;
+    color: #333;
+    font-weight: 600;
+}
+
+.note-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.note-content {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.note-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #00264e;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.note-date {
+    color: #999;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+/* Header with logout button */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-logout {
+    background: #00abd6;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;;
+}
+
+.btn-logout:hover {
+    background: #c82333;
+}
+
+#usernameDisplay {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Search and Filter Section */
+.filter-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.filter-group,
+.search-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label,
+.search-group label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.filter-section select,
+.search-group input {
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.search-group input {
+    width: 100%;
+}
+
+.filter-section .btn {
+    align-self: flex-end;
+}

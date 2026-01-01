@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking App</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div>
+                    <h1>My Notes</h1>
+                    <p>Welcome, <span id="usernameDisplay">User</span>!</p>
+                </div>
+                <button onclick="logout()" class="btn btn-logout">Logout</button>
+            </div>
+        </header>
+
+        <!-- Create Note Form -->
+        <div class="card">
+            <h2>Create New Note</h2>
+            <form id="noteForm">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="content">Content:</label>
+                    <textarea id="content" name="content" rows="4" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tags">Tags (comma separated):</label>
+                    <input type="text" id="tags" name="tags" placeholder="work, important, personal">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Add Note</button>
+            </form>
+        </div>
+
+        <!-- Filter Section -->
+        <!-- Filter and Search Section -->
+        <div class="filter-section">
+            <div class="filter-group">
+                <label for="filterTag">Filter by tag:</label>
+                <select id="filterTag">
+                    <option value="">All Notes</option>
+                </select>
+                <button onclick="filterNotes()" class="btn btn-secondary">Filter</button>
+            </div>
+            
+            <div class="search-group">
+                <label for="searchQuery">Search notes:</label>
+                <input type="text" id="searchQuery" placeholder="Search in title or content...">
+                <button onclick="searchNotes()" class="btn btn-secondary">Search</button>
+            </div>
+            
+            <button onclick="loadNotes()" class="btn btn-secondary">Show All</button>
+        </div>
+
+        <!-- Notes List -->
+        <div id="notesList">
+            <p>Loading notes...</p>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
